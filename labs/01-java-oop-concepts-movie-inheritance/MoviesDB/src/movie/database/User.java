@@ -86,7 +86,8 @@ public class User {
                return;
            }
        }
-       this.userType = "Actor";
+        System.out.println("Type is not supported.");
+       this.userType = "Not Supported";
     }
 
     private void checkEmailValidity(String email) {
