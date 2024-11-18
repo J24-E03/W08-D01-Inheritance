@@ -1,8 +1,7 @@
 package org.dcistudent.models.wildness;
 
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter @Setter
 public class Animal {

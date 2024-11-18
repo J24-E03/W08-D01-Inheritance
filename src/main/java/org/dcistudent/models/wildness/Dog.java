@@ -1,7 +1,5 @@
 package org.dcistudent.models.wildness;
 
-import jakarta.validation.constraints.NotNull;
-
 public class Dog extends Animal {
     /**
      * Creates a new dog.
