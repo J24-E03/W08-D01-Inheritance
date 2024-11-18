@@ -17,4 +17,10 @@ public class Bank {
   public void addAccounts(Account... accounts) {
     this.accounts.addAll(Arrays.asList(accounts));
   }
+
+  public void update() {
+    for (Account account : this.accounts) {
+        account.doUpdate();
+    }
+  }
 }
