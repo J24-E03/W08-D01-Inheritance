@@ -10,9 +10,7 @@ import lombok.*;
 public class Actor extends User {
     @NotBlank
     String nationality;
-    @NotNull
     boolean wonOscar = false;
-    @NotNull
     int debutYear;
     @NotNull.List(@NotNull)
     private final List<Movie> movies = new ArrayList<>();
@@ -29,8 +27,8 @@ public class Actor extends User {
         @NotNull Integer age,
         @Email String email,
         @NotBlank String nationality,
-        @NotNull boolean wonOscar,
-        @NotNull int debutYear
+        boolean wonOscar,
+        int debutYear
     ) {
         super(name, age, email);
         this.setNationality(nationality);
@@ -54,7 +52,7 @@ public class Actor extends User {
      * @param debutYear the debut year of the actor
      * @return the Actor object
      */
-    public Actor setDebutYear(@NotNull int debutYear) {
+    public Actor setDebutYear(int debutYear) {
         int birthYear = LocalDateTime.now().getYear() - this.getAge();
 
         if (debutYear < this.getAge() || debutYear-birthYear > 130) {
@@ -76,7 +74,10 @@ public class Actor extends User {
      * @param movie the movie to add to the actor
      * @return true if the movie was added to the actor, false otherwise
      */
-    public boolean addMovie(@NotNull Movie movie) {
+    public boolean addMovie(
+        @NotNull(message = "Movie cannot be empty.")
+        Movie movie
+    ) {
         if (this.getMovies().contains(movie)) {
             System.out.println("Movie already exists in the actor.");
 

@@ -35,7 +35,16 @@ public class User {
         this.setEmail(email);
     }
 
-    public User setUserType(String userType) {
+    /**
+     * Sets the user type.
+     *
+     * @param userType the user type
+     * @return the user type
+     */
+    public User setUserType(
+        @NotBlank(message = "User type cannot be empty.")
+        String userType
+    ) {
         if (userTypes.contains(userType)) {
             this.userType = userType;
 
@@ -47,6 +56,12 @@ public class User {
         return this;
     }
 
+    /**
+     * Returns a string representation of a user.
+     *
+     * @return a string representation of a user
+     */
+    @Override
     public String toString() {
         return
             "Name: " + this.getName() +

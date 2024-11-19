@@ -58,7 +58,10 @@ public class Movie {
      * @param genre the genre of the movie
      * @return the genre of the movie
      */
-    public Movie setGenre(@NotBlank String genre) {
+    public Movie setGenre(
+        @NotBlank(message = "Genre cannot be empty.")
+        String genre
+    ) {
         if (genres.contains(genre)) {
             this.genre = genre;
 
@@ -78,7 +81,10 @@ public class Movie {
      * @param genre the genre to add to the list of genres
      * @return true if the genre was added to the list of genres, false otherwise
      */
-    public boolean addGenre(@NotBlank String genre) {
+    public boolean addGenre(
+        @NotBlank(message = "Genre cannot be empty.")
+        String genre
+    ) {
         if (genres.contains(genre.toLowerCase())) {
             System.out.println("Genre already exists.");
 
@@ -94,7 +100,10 @@ public class Movie {
      * @param rating the rating of the movie
      * @return the rating of the movie
      */
-    public Double setRating(@NotBlank Double rating) {
+    public Double setRating(
+        @NotNull(message = "Rating cannot be empty.")
+        Double rating
+    ) {
         if (rating < 0 || rating > 10) {
             System.out.println("Invalid rating. Please enter a value between 0 and 10.");
 
@@ -112,7 +121,10 @@ public class Movie {
      * @param actor the actor to add to the movie
      * @return true if the actor was added to the movie, false otherwise
      */
-    public boolean addActor(@NotBlank Actor actor) {
+    public boolean addActor(
+        @NotNull(message = "Actor cannot be empty.")
+        Actor actor
+    ) {
         if (this.getActors().contains(actor)) {
             System.out.println("Actor already exists in the movie.");
 
@@ -148,7 +160,7 @@ public class Movie {
      * @param actor the actor to find in the movie
      * @return true if the actor was found in the movie, false otherwise
      */
-    public boolean findActor(@NotBlank Actor actor) {
+    public boolean findActor(@NotNull Actor actor) {
         return this.actors.contains(actor);
     }
 }
