@@ -31,6 +31,10 @@ public class Account {
     return accNumber;
   }
 
+  public void setBalance(double balance) {
+    this.balance = balance;
+  }
+
   protected void doUpdate() {
     // nothing here
   }
