@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/labs/02-Java-oop_concepts-inheritance/02-Java-oop_concepts-inheritance.iml" filepath="$PROJECT_DIR$/labs/02-Java-oop_concepts-inheritance/02-Java-oop_concepts-inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labs/03-Java-oop_concepts-bank_account/03-Java-oop_concepts-bank_account.iml" filepath="$PROJECT_DIR$/labs/03-Java-oop_concepts-bank_account/03-Java-oop_concepts-bank_account.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson-code/Lesson-code.iml" filepath="$PROJECT_DIR$/Lesson-code/Lesson-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/W08-D01-Inheritance.iml" filepath="$PROJECT_DIR$/.idea/W08-D01-Inheritance.iml" />
+    </modules>
+  </component>
+</project>
