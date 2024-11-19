@@ -8,15 +8,13 @@ public class CurrentAccount extends Account {
     }
 
     public void withdraw(double amount) {
-        double currentBalance = getBalance();
+
 
         if ( amount > 0 ) {
-            if(currentBalance-amount<overdraftLimit){
-                currentBalance -= amount;
-                Account.set
+            if(getBalance()-amount<overdraftLimit){
+                setBalance(getBalance() - amount);
             }else {
-
-                System.err.println("Account.withdraw(...): cannot withdraw negative amount.");
+                System.err.println("Your withdraw request is too more than allowed amount!");
             }
         } else {
             System.err.println("Account.withdraw(...): cannot withdraw negative amount.");

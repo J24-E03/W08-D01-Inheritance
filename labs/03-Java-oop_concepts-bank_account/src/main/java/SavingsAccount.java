@@ -8,8 +8,7 @@ public class SavingsAccount extends Account {
     }
 
     public double addInterest() {
-        double balance = getBalance();
-        return balance * interest;
+        return getBalance() * interest;
     }
 
 
